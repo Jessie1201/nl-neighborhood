@@ -16,22 +16,18 @@
     "docs:assets": "cp node_modules/prismjs/themes/prism-okaidia.css docs/",
     "docs:serve": "es-dev-server --root-dir=docs --node-resolve --watch",
     "analyze": "wca analyze \"**/*.js\" --outFile custom-elements.json",
-    "serve": "es-dev-server --node-resolve --watch",
+    "start": "es-dev-server --node-resolve --watch",
     "test": "karma start karma.conf.cjs",
     "test:watch": "karma start karma.conf.cjs --auto-watch=true --single-run=false",
     "test:update-snapshots": "karma start karma.conf.cjs --update-snapshots",
     "test:prune-snapshots": "karma start karma.conf.cjs --prune-snapshots",
     "checksize": "rollup -c ; cat my-element.bundled.js | gzip -9 | wc -c ; rm my-element.bundled.js"
   },
-  "keywords": [
-    "web-components",
-    "lit-element",
-    "javascript"
-  ],
-  "author": "The Polymer Authors",
-  "license": "BSD-3-Clause",
+  "author": "Jiaqi (Jessie) Zheng",
+  "license": "",
   "dependencies": {
-    "lit-element": "^2.3.1"
+    "lit-element": "^2.4.0",
+    "mapbox-gl": "^2.0.1"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
