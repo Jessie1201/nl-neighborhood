@@ -43,6 +43,14 @@ export class MyElement extends LitElement {
       container: 'map',
       antialias: true
     });
+
+    // location search with mapbox-gl-geocoder
+    map.addControl(
+      new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        mapboxgl: mapboxgl
+      })
+    );
     
     // The 'building' layer in the mapbox-streets vector source contains building-height
     // data from OpenStreetMap.
